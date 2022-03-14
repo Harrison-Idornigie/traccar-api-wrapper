@@ -1,6 +1,6 @@
 <?php
 
-namespace Javleds\Traccar\Exceptions;
+namespace Harrometer\TraccarLaravelApi\Exceptions;
 
 use Exception;
 use Throwable;

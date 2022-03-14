@@ -1,10 +1,9 @@
 <?php
 
 
-namespace Javleds\Traccar;
+namespace Harrometer\TraccarLaravelApi;
 
 
 class Session
 {
-
 }

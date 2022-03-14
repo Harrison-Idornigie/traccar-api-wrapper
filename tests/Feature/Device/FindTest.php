@@ -1,10 +1,10 @@
 <?php
 
-namespace Javleds\Traccar\Tests\Feature;
+namespace Harrometer\TraccarLaravelApi\Tests\Feature;
 
-use Javleds\Traccar\Exceptions\TraccarApiCallException;
-use Javleds\Traccar\Models\Device;
-use Javleds\Traccar\Tests\BaseTestCase;
+use Harrometer\TraccarLaravelApi\Exceptions\TraccarApiCallException;
+use Harrometer\TraccarLaravelApi\Models\Device;
+use Harrometer\TraccarLaravelApi\Tests\BaseTestCase;
 use Exception;
 
 class FindTest extends BaseTestCase

@@ -1,6 +1,6 @@
 <?php
 
-namespace Javleds\Traccar;
+namespace Harrometer\TraccarLaravelApi;
 
 use Illuminate\Support\ServiceProvider;
 
@@ -23,7 +23,7 @@ class TraccarServiceProvider extends ServiceProvider
             'traccar'
         );
 
-        $this->app->singleton('traccar-client', function() {
+        $this->app->singleton('traccar-client', function () {
             return new Api\Client(
                 config('traccar.base_url'),
                 config('traccar.auth.username'),

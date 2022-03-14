@@ -1,12 +1,12 @@
 <?php
 
-namespace Javleds\Traccar\Tests\Feature\Device;
+namespace Harrometer\TraccarLaravelApi\Tests\Feature\Device;
 
 use GuzzleHttp\Client;
 use Illuminate\Support\Str;
-use Javleds\Traccar\Models\Device;
+use Harrometer\TraccarLaravelApi\Models\Device;
 use PHPUnit\Framework\TestCase;
-use Javleds\Traccar\Tests\BaseTestCase;
+use Harrometer\TraccarLaravelApi\Tests\BaseTestCase;
 
 
 class CreateTest extends BaseTestCase
@@ -30,7 +30,7 @@ class CreateTest extends BaseTestCase
         ];
 
         $deviceModel = Device::store($device_attributes['name']);
-        
+
         $this->assertSame($device_attributes['name'], $deviceModel->getName());
     }
 }

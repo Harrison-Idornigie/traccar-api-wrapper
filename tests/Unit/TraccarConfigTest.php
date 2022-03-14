@@ -1,8 +1,8 @@
 <?php
 
-namespace Javleds\Traccar\Tests\Unit;
+namespace Harrometer\TraccarLaravelApi\Tests\Unit;
 
-use Javleds\Traccar\Tests\BaseTestCase;
+use Harrometer\TraccarLaravelApi\Tests\BaseTestCase;
 
 class TraccarConfigTest extends BaseTestCase
 {

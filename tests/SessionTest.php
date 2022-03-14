@@ -1,8 +1,8 @@
 <?php
 
-namespace Javleds\Traccar\Tests;
+namespace Harrometer\TraccarLaravelApi\Tests;
 
-use Javleds\Traccar\Session;
+use Harrometer\TraccarLaravelApi\Session;
 use PHPUnit\Framework\TestCase;
 use Symfony\Component\HttpClient\HttpClient;
 
@@ -18,7 +18,7 @@ class SessionTest extends TestCase
             ]
         ]);
 
-        $decoded = json_decode($response->getContent(),true);
+        $decoded = json_decode($response->getContent(), true);
         $this->assertJson($response->getContent());
 
         $this->assertArrayHasKey('id', $decoded);

@@ -1,10 +1,10 @@
 <?php
 
-namespace Javleds\Traccar\Tests\Feature\Device;
+namespace Harrometer\TraccarLaravelApi\Tests\Feature\Device;
 
-use Javleds\Traccar\Exceptions\TraccarApiCallException;
-use Javleds\Traccar\Models\Device;
-use Javleds\Traccar\Tests\BaseTestCase;
+use Harrometer\TraccarLaravelApi\Exceptions\TraccarApiCallException;
+use Harrometer\TraccarLaravelApi\Models\Device;
+use Harrometer\TraccarLaravelApi\Tests\BaseTestCase;
 
 class DestroyTest extends BaseTestCase
 {

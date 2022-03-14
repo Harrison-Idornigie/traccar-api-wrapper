@@ -1,6 +1,6 @@
 <?php
 
-namespace Javleds\Traccar\Contracts;
+namespace Harrometer\TraccarLaravelApi\Contracts;
 
 interface Importable
 {

@@ -1,6 +1,6 @@
 <?php
 
-namespace Javleds\Traccar\Facades;
+namespace Harrometer\TraccarLaravelApi\Facades;
 
 use Illuminate\Support\Facades\Facade;
 

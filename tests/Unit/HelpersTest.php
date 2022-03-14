@@ -1,8 +1,8 @@
 <?php
 
-namespace Javleds\Traccar\Tests\Unit\Helpers;
+namespace Harrometer\TraccarLaravelApi\Tests\Unit\Helpers;
 
-use Javleds\Traccar\Tests\BaseTestCase;
+use Harrometer\TraccarLaravelApi\Tests\BaseTestCase;
 
 class HelpersTest extends BaseTestCase
 {

@@ -1,11 +1,11 @@
 <?php
 
-namespace Javleds\Traccar\Tests;
+namespace Harrometer\TraccarLaravelApi\Tests;
 
 use Faker\Factory;
 use Faker\Generator;
-use Javleds\Traccar\Facades\Client;
-use Javleds\Traccar\TraccarServiceProvider;
+use Harrometer\TraccarLaravelApi\Facades\Client;
+use Harrometer\TraccarLaravelApi\TraccarServiceProvider;
 use Orchestra\Testbench\TestCase;
 
 class BaseTestCase extends TestCase

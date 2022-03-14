@@ -1,11 +1,11 @@
 <?php
 
-namespace Javleds\Traccar\Api;
+namespace Harrometer\TraccarLaravelApi\Api;
 
 use Exception;
 use GuzzleHttp\Client as GuzzleClient;
 use Illuminate\Support\Arr;
-use Javleds\Traccar\Exceptions\TraccarApiCallException;
+use Harrometer\TraccarLaravelApi\Exceptions\TraccarApiCallException;
 
 class Client
 {

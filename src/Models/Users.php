@@ -1,11 +1,11 @@
 <?php
 
-namespace Javleds\Traccar\Models;
+namespace Harrometer\TraccarLaravelApi\Models;
 
 use DateTime;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Str;
-use Javleds\Traccar\Facades\Client;
+use Harrometer\TraccarLaravelApi\Facades\Client;
 
 class Device extends Model
 {
@@ -105,8 +105,8 @@ class Device extends Model
             'attributes',
         ];
 
-        if (!empty($attributes)){
-            $traccarAttributes = array_merge($traccarAttributes,$attributes);
+        if (!empty($attributes)) {
+            $traccarAttributes = array_merge($traccarAttributes, $attributes);
         }
 
         $result = Client::post(self::ENDPOINT, [], [
@@ -148,8 +148,8 @@ class Device extends Model
             'attributes',
         ];
 
-        if (!empty($attributes)){
-            $traccarAttributes = array_merge($traccarAttributes,$attributes);
+        if (!empty($attributes)) {
+            $traccarAttributes = array_merge($traccarAttributes, $attributes);
         }
 
         $result = Client::put(self::ENDPOINT, [], [
@@ -164,5 +164,5 @@ class Device extends Model
 
     //
 
-    
+
 }
