@@ -1,0 +1,42 @@
+{
+    "name": "harrometer/traccar-laravel-api",
+    "description": "A simple traccar api wrapper for Laravel",
+    "type": "library",
+    "license": "MIT",
+    "authors": [{
+        "name": "Harrison-Idornigie",
+        "email": "idornigie.harrison@gmail.com"
+    }],
+    "autoload": {
+        "psr-4": {
+            "Harrometer\\TraccarLaravelApi\\": "src/"
+        },
+        "files": [
+            "src/helpers.php"
+        ]
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Harrometer\\TraccarLaravelApi\\Tests\\": "tests/"
+        }
+    },
+    "require": {
+        "orchestra/testbench": "^5.1",
+        "simpligps/simpligps-standard": "dev-master",
+        "guzzlehttp/guzzle": "^7.2",
+        "ext-json": "*"
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Harrometer\\TraccarLaravelApi\\TraccarServiceProvider"
+            ],
+            "aliases": {
+                "TraccarClient": "Harrometer\\TraccarLaravelApi\\Facades\\Client"
+            }
+        }
+    },
+    "require-dev": {
+        "fzaninotto/faker": "^1.9"
+    }
+}
