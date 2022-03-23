@@ -22,7 +22,7 @@
     },
     "require": {
         "simpligps/simpligps-standard": "dev-master",
-        "guzzlehttp/guzzle": "^7.2",
+        "guzzlehttp/guzzle": "^7.4",
         "ext-json": "*"
     },
     "extra": {

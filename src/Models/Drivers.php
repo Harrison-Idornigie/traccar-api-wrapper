@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Str;
 use Harrometer\TraccarLaravelApi\Facades\Client;
 
-class Device extends Model
+class Drivers extends Model
 {
     const ENDPOINT = 'drivers';
 

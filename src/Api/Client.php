@@ -3,14 +3,17 @@
 namespace Harrometer\TraccarLaravelApi\Api;
 
 use Exception;
-use GuzzleHttp\Client as GuzzleClient;
 use Illuminate\Support\Arr;
+use Illuminate\Support\Facades\Http;
+use GuzzleHttp\Client as GuzzleClient;
 use Harrometer\TraccarLaravelApi\Exceptions\TraccarApiCallException;
 
 class Client
 {
     /** @var Client */
     private $client;
+    private $baseUrl;
+
 
     public function __construct(string $baseUrl, string $username, string $password)
     {
@@ -32,7 +35,6 @@ class Client
         } catch (Exception $exception) {
             $this->handleException($exception);
         }
-
         return $this->buildResponse($response);
     }
 
@@ -98,7 +100,6 @@ class Client
         } else {
             $data['query'] = http_build_query($params);
         }
-
         return array_merge($data, $options);
     }
 
@@ -115,6 +116,7 @@ class Client
         }
 
         $contentType = $this->getContentType($response->getHeader('content-type'));
+
         switch ($contentType) {
             case 'application/json':
                 return json_decode($response->getBody()->getContents());

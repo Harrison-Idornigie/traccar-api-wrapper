@@ -3,14 +3,17 @@
 namespace Harrometer\TraccarLaravelApi;
 
 use Illuminate\Support\ServiceProvider;
+use Harrometer\TraccarLaravelApi\Api\Client;
 
 class TraccarServiceProvider extends ServiceProvider
 {
     public function boot(): void
     {
+        $this->loadRoutesFrom(__DIR__ . '/../routes/web.php'); //Test
+
         $this->publishes(
             [
-                getBaseDir('config/traccar.php') => config_path('traccar.php'),
+                __DIR__ . '/../config/traccar.php' => config_path('traccar.php'),
             ],
             'traccar-config'
         );
@@ -19,12 +22,13 @@ class TraccarServiceProvider extends ServiceProvider
     public function register(): void
     {
         $this->mergeConfigFrom(
-            getBaseDir('config/traccar.php'),
+            // getBaseDir('config/traccar.php'),
+            __DIR__ . '/../config/traccar.php',
             'traccar'
         );
 
         $this->app->singleton('traccar-client', function () {
-            return new Api\Client(
+            return new Client(
                 config('traccar.base_url'),
                 config('traccar.auth.username'),
                 config('traccar.auth.password')

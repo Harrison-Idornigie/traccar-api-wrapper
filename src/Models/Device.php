@@ -3,8 +3,8 @@
 namespace Harrometer\TraccarLaravelApi\Models;
 
 use DateTime;
-use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Str;
+use Illuminate\Database\Eloquent\Model;
 use Harrometer\TraccarLaravelApi\Facades\Client;
 
 class Device extends Model
@@ -40,13 +40,16 @@ class Device extends Model
 
     public static function find(string $id)
     {
-        $response = Client::get(self::ENDPOINT, [
-            'uniqueId' => $id,
-        ]);
+        // $response = Client::get(self::ENDPOINT, [
+        //     'uniqueId' => $id,
+        // ]);
 
-        $devices = Device::hydrate($response);
+        $response = Client::get(self::ENDPOINT . '/' . $id, []);
+        // $response = Client::get(self::ENDPOINT, []);
 
-        return $devices->first() ?? null;
+        // $devices = Device::hydrate($response);
+        // return $devices->first() ?? null;
+        return $response;
     }
 
     public static function destroy($id)

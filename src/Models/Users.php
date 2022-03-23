@@ -3,11 +3,11 @@
 namespace Harrometer\TraccarLaravelApi\Models;
 
 use DateTime;
-use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Str;
+use Illuminate\Database\Eloquent\Model;
 use Harrometer\TraccarLaravelApi\Facades\Client;
 
-class Device extends Model
+class Users extends Model
 {
     const ENDPOINT = 'users';
 
